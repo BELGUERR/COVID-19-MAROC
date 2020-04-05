@@ -1,20 +1,136 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- 
+    <input ngModel= "CoutName" type="text">
+    
+  
 
+<div>
+<tr *ngFor="let c of countries">
+
+    <label>recovered</label>
+    <h1>{{c.recovered}}</h1>
+    <label>confirmed</label>
+    <h1>{{c.confirmed}}</h1>
+    <label>deaths</label>
+    <h1>{{c.deaths}}</h1>
+    <label>Active</label>
+    <h1>{{c.active}}</h1>
+
+</tr>
+</div> -->
+<html>
+	<head>
+		<title>Covid-19 Satitictis In Morocco</title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+    </head>
+    
+    
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>COVID-19 STATISTICS IN MOROCCO</strong> DEV BY BELGUERR</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner" *ngFor="let c of countries">
+									<div class="content">
+										<header  class=col-6 align-self-center>
+                                            <div class="card text-white bg-success mb-3" style="max-width: 14rem;">
+                                                <div class="card-header">Recovered Cases</div>
+                                                <div class="card-body">
+                                                  <h5 class="card-title" style="max-width: 14rem;">{{c.recovered}}</h5>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                            <div class="card text-white bg-danger mb-3" style="max-width: 14rem;">
+                                                
+                                                <div class="card-header">Deaths Cases</div>
+                                                <div class="card-body">
+                                                  <h5 class="card-title">{{c.deaths}}</h5>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                            <div class="card text-white bg-warning mb-3" style="max-width: 14rem;">
+                                                <div class="card-header">Active Cases</div>
+                                                <div class="card-body">
+                                                  <h5 class="card-title">{{c.active}}</h5>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                            <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
+                                                <div class="card-header">Confirmed Cases</div>
+                                                <div class="card-body">
+                                                  <h5 class="card-title">{{c.confirmed}}</h5>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                                
+										</header>
+										
+										<ul class="actions">
+											<!-- <li><a href="#" class="button big">Learn More</a></li> -->
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Search -->
+								<!-- <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section> -->
+								<section>
+									<header class="major">
+										<h2>For more Information</h2>
+									</header>
+									<p>This is non-official Website, all the informations are based on Health ministry daily result.</p>
+									<ul class="contact">
+										<li class="icon solid fa-phone">ALLO YAKADA : 0801 00 47 47</li>
+										<li class="icon solid fa-phone">CONSULTATION BY TELEPHONY :  141</li>
+										<li class="icon solid fa-home"> CORONA DOANATE HERE<br />
+                                            001 810 00 780 002 011 062 02</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; COVID-19 STATISTICS. All rights reserved. DEVAPP <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	
+	</body>
+</html>
