@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   mainStats: Observable<MainStat>;
   countries : any=null;
   CoutName : string;
+  countrydata : string = null;
  
 
  MainStatsByCountries : any=null;

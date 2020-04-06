@@ -44,56 +44,104 @@
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                                        <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                                        <li><a href="https://github.com/BELGUERR" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 									</ul>
 								</header>
 
 							<!-- Banner -->
-								<section id="banner" *ngFor="let c of countries">
-									<div class="content">
-										<header  class=col-6 align-self-center>
+								<section id="banner" *ngFor="let c of countries.countrydata">
+                                   
+                                    <div class="container">
+									<div class="row" >
+										<header>
+                                            
+                                            <div class="col-md-3 col-sm-6">
                                             <div class="card text-white bg-success mb-3" style="max-width: 14rem;">
-                                                <div class="card-header">Recovered Cases</div>
+                                                <div class="card-header"><h4 >Recovered Cases</h4></div>
                                                 <div class="card-body">
-                                                  <h5 class="card-title" style="max-width: 14rem;">{{c.recovered}}</h5>
+                                                  <h1 class="card-title" style="max-width: 14rem;">{{c.total_recovered}}</h1>
                                                   <p class="card-text"></p>
                                                 </div>
                                             </div>
-                                            <div class="card text-white bg-danger mb-3" style="max-width: 14rem;">
+                                        </div>
+                                            <div class="col-md-3 col-sm-6">
+                                            <div class="card text-white bg-danger mb-3"  style="max-width: 14rem;">
                                                 
-                                                <div class="card-header">Deaths Cases</div>
+                                                <div class="card-header" ><h4>Deaths Cases</h4></div>
                                                 <div class="card-body">
-                                                  <h5 class="card-title">{{c.deaths}}</h5>
+                                                  <h1 class="card-title">{{c.total_deaths}}</h1>
                                                   <p class="card-text"></p>
                                                 </div>
                                             </div>
+                                        </div>
+                                            <div class="col-md-3 col-sm-6">
                                             <div class="card text-white bg-warning mb-3" style="max-width: 14rem;">
-                                                <div class="card-header">Active Cases</div>
+                                                <div class="card-header"><h4>Active Cases</h4></div>
                                                 <div class="card-body">
-                                                  <h5 class="card-title">{{c.active}}</h5>
+                                                  <h1 class="card-title">{{c.total_active_cases}}</h1>
                                                   <p class="card-text"></p>
                                                 </div>
                                             </div>
+                                        </div>
+                                            <div class="col-md-3 col-sm-6">
                                             <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
-                                                <div class="card-header">Confirmed Cases</div>
+                                                <div class="card-header"><h5>Confirmed Cases</h5></div>
                                                 <div class="card-body">
-                                                  <h5 class="card-title">{{c.confirmed}}</h5>
+                                                  <h1 class="card-title">{{c.total_cases}}</h1>
                                                   <p class="card-text"></p>
                                                 </div>
                                             </div>
-                                                
-										</header>
-										
+                                        </div>
+                                            <div class="col-md-3 col-sm-6">
+                                            <div class="card text-white bg-info mb-3" style="max-width: 14rem;">
+                                                <div class="card-header"><h5>New Cases</h5></div>
+                                                <div class="card-body">
+                                                  <h1 class="card-title">{{c.total_new_cases_today}}</h1>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="card text-white bg-info mb-3" style="max-width: 14rem;">
+                                                <div class="card-header"><h5>New Deaths Today</h5></div>
+                                                <div class="card-body">
+                                                  <h1 class="card-title">{{c.total_new_deaths_today}}</h1>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="card text-white bg-info mb-3" style="max-width: 14rem;">
+                                                <div class="card-header"><h5>cCases In Danger</h5></div>
+                                                <div class="card-body">
+                                                  <h1 class="card-title">{{c.total_serious_cases}}</h1>
+                                                  <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </header>
+                                    </div>
+                                </div>    
+
+									<div>	
 										<ul class="actions">
 											<!-- <li><a href="#" class="button big">Learn More</a></li> -->
 										</ul>
-									</div>
+                                    </div>
+                                    <div>
 									<span class="image object">
 										<img src="images/pic10.jpg" alt="" />
-									</span>
+                                    </span>
+                                    </div>
 								</section>
-						</div>
-					</div>
+                        </div>
+
+
+                        
+                    </div>
+                    
+                    
 
 				<!-- Sidebar -->
 					<div id="sidebar">
@@ -114,12 +162,15 @@
 										<li class="icon solid fa-phone">CONSULTATION BY TELEPHONY :  141</li>
 										<li class="icon solid fa-home"> CORONA DOANATE HERE<br />
                                             001 810 00 780 002 011 062 02</li>
-									</ul>
-								</section>
+                                    </ul>
+                                    
+                                </section>
+                                
+                                
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; COVID-19 STATISTICS. All rights reserved. DEVAPP <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; COVID-19 STATISTICS. All rights reserved. DEVAPP<a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 
 						</div>
@@ -128,9 +179,9 @@
             </div>
             
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-	
+	 
 	</body>
 </html>

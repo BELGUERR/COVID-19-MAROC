@@ -8,17 +8,18 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServicesService {
-  api = 'https://covid19.mathdro.id/api';
+  //api = 'https://covid19.mathdro.id/api';
+  api1 = 'https://api.thevirustracker.com/free-api?'
 
   constructor( private http : HttpClient) { 
     
   }
   getCountries() {
-    return this.http.get(`${this.api}/countries/morocco/confirmed`);
+    return this.http.get(`${this.api1}countryTotal=MA`);
   }
 
   getMainStats() {
-    return this.http.get(`${this.api}`).pipe(
+    return this.http.get(`${this.api1}`).pipe(
       map((item: any) => ({
         ...item,
         cases: item.confirmed.value,
@@ -28,7 +29,7 @@ export class ServicesService {
   }
 
   getMainStatsByCountries(country: string) {
-    return this.http.get(`${this.api}/countries/${country}`).pipe(
+    return this.http.get(`${this.api1}/countries/${country}`).pipe(
       map((item: any) => ({
         ...item,
         cases: item.confirmed.value,
@@ -38,7 +39,7 @@ export class ServicesService {
     );
   }
   getDetailedStatsByCountries(country: string): Observable<DetailedStat> {
-    return this.http.get(`${this.api}/countries/${country}/confirmed`).pipe(
+    return this.http.get(`${this.api1}/countries/${country}/confirmed`).pipe(
       map((list: any) =>
         list.map(item =>
           ({
